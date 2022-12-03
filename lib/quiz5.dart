@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:history/quiz2.dart';
+import 'package:history/menu.dart';
+import 'package:history/timeline.dart';
 
-class Quiz extends StatefulWidget {
-  const Quiz({Key? key}) : super(key: key);
+class Quiz5 extends StatefulWidget {
+  const Quiz5({Key? key}) : super(key: key);
 
   @override
-  State<Quiz> createState() => _QuizState();
+  State<Quiz5> createState() => _QuizState();
 }
 
-class _QuizState extends State<Quiz> {
+class _QuizState extends State<Quiz5> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,50 +22,10 @@ class _QuizState extends State<Quiz> {
               color: Colors.white,
               width: 400,
               height: 100,
-              child: Center(
-                child: Text("When did world war 1 occured?",
-                style: TextStyle(fontSize:25 ),),
-              ),
+              child: Center(child: Text("when did life of earth evolved ?",style: TextStyle(fontSize:25 )),),
             ),
             SizedBox(height: 20,),
-            Container(width: 220,height: 40,
-              child: ElevatedButton(
-
-                onPressed: () {},
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                        (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.pressed))
-                        return Colors.redAccent; //<-- SEE HERE
-                      return null; // Defer to the widget's default.
-                    },
-                  ),
-                ),
-                child: const Text(
-                  'August ,28,1947',
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                        (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.pressed))
-                        return Colors.redAccent; //<-- SEE HERE
-                      return null; // Defer to the widget's default.
-                    },
-                  ),
-                ),
-                child: const Text(
-                  'July ,28,1952',
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
+            Container(width: 250,height: 40,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
@@ -77,16 +38,15 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,28,1914',
+                  '4 Billion years ago',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
+            Container(width: 250,height: 40,
               child: ElevatedButton(
-                onPressed: () { },
+                onPressed: () {},
                 style: ButtonStyle(
-
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
                       if (states.contains(MaterialState.pressed))
@@ -96,19 +56,51 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,30 1914',
+                  '8 Billion years ago',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),SizedBox(height: 20,),
+            Container(width: 250,height:40,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                        (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed))
+                        return Colors.green; //<-- SEE HERE
+                      return null; // Defer to the widget's default.
+                    },
+                  ),
+                ),
+                child: const Text(
+                  '10 Billion years ago',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),SizedBox(height: 20,),
+            Container(width: 250,height: 40,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                        (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed))
+                        return Colors.redAccent; //<-- SEE HERE
+                      return null; // Defer to the widget's default.
+                    },
+                  ),
+                ),
+                child: const Text(
+                  '1 Billion year ago',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(200,40),
-              ),
-                onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Quiz2()));
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Menu()));
             },
-                child: Text("Next Question"))
+                child: Text("Back to menu"))
           ],
         ),
       ),

@@ -121,7 +121,7 @@ class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Menu"),backgroundColor: Colors.brown,),
+      appBar: AppBar(title: Text("Menu"),backgroundColor: Colors.indigo,),
       body: SingleChildScrollView(
         child: Container(
           color:  Color(0xE5DADAFF),

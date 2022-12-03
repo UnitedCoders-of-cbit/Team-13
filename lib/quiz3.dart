@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:history/quiz2.dart';
+import 'package:history/quiz4.dart';
 
-class Quiz extends StatefulWidget {
-  const Quiz({Key? key}) : super(key: key);
+class Quiz3 extends StatefulWidget {
+  const Quiz3({Key? key}) : super(key: key);
 
   @override
-  State<Quiz> createState() => _QuizState();
+  State<Quiz3> createState() => _QuizState();
 }
 
-class _QuizState extends State<Quiz> {
+class _QuizState extends State<Quiz3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,15 +21,11 @@ class _QuizState extends State<Quiz> {
               color: Colors.white,
               width: 400,
               height: 100,
-              child: Center(
-                child: Text("When did world war 1 occured?",
-                style: TextStyle(fontSize:25 ),),
-              ),
+              child: Center(child: Text("When did humans evolved?",style: TextStyle(fontSize:25 )),),
             ),
             SizedBox(height: 20,),
             Container(width: 220,height: 40,
               child: ElevatedButton(
-
                 onPressed: () {},
                 style: ButtonStyle(
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
@@ -41,12 +37,12 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'August ,28,1947',
+                  '10 Million years',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
+            Container(width: 220,height: 40,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
@@ -59,12 +55,12 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,28,1952',
+                  '16 Million years',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
+            Container(width: 220,height: 40,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ButtonStyle(
@@ -77,16 +73,15 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,28,1914',
+                  '6 Million years',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),SizedBox(height: 20,),
-            Container(width: 200,height: 40,
+            Container(width: 220,height: 40,
               child: ElevatedButton(
-                onPressed: () { },
+                onPressed: () {},
                 style: ButtonStyle(
-
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
                       if (states.contains(MaterialState.pressed))
@@ -96,17 +91,13 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,30 1914',
+                  '8 Million years',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(200,40),
-              ),
-                onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Quiz2()));
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Quiz4()));
             },
                 child: Text("Next Question"))
           ],

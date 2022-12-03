@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:history/quiz2.dart';
+import 'package:history/quiz3.dart';
 
-class Quiz extends StatefulWidget {
-  const Quiz({Key? key}) : super(key: key);
+class Quiz2 extends StatefulWidget {
+  const Quiz2({Key? key}) : super(key: key);
 
   @override
-  State<Quiz> createState() => _QuizState();
+  State<Quiz2> createState() => _QuizState();
 }
 
-class _QuizState extends State<Quiz> {
+class _QuizState extends State<Quiz2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,31 +21,9 @@ class _QuizState extends State<Quiz> {
               color: Colors.white,
               width: 400,
               height: 100,
-              child: Center(
-                child: Text("When did world war 1 occured?",
-                style: TextStyle(fontSize:25 ),),
-              ),
+              child: Center(child: Text("Which of these is not a western-capitalist group at the  time of COLD WAR?",style: TextStyle(fontSize:25 )),),
             ),
             SizedBox(height: 20,),
-            Container(width: 220,height: 40,
-              child: ElevatedButton(
-
-                onPressed: () {},
-                style: ButtonStyle(
-                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                        (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.pressed))
-                        return Colors.redAccent; //<-- SEE HERE
-                      return null; // Defer to the widget's default.
-                    },
-                  ),
-                ),
-                child: const Text(
-                  'August ,28,1947',
-                  style: TextStyle(fontSize: 24),
-                ),
-              ),
-            ),SizedBox(height: 20,),
             Container(width: 200,height: 40,
               child: ElevatedButton(
                 onPressed: () {},
@@ -59,7 +37,7 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,28,1952',
+                  'South Africa',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
@@ -77,16 +55,15 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,28,1914',
+                  'Vietnam.',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),SizedBox(height: 20,),
             Container(width: 200,height: 40,
               child: ElevatedButton(
-                onPressed: () { },
+                onPressed: () {},
                 style: ButtonStyle(
-
                   overlayColor: MaterialStateProperty.resolveWith<Color?>(
                         (Set<MaterialState> states) {
                       if (states.contains(MaterialState.pressed))
@@ -96,17 +73,31 @@ class _QuizState extends State<Quiz> {
                   ),
                 ),
                 child: const Text(
-                  'July ,30 1914',
+                  'Thailand',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),SizedBox(height: 20,),
+            Container(width: 200,height: 40,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                        (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed))
+                        return Colors.redAccent; //<-- SEE HERE
+                      return null; // Defer to the widget's default.
+                    },
+                  ),
+                ),
+                child: const Text(
+                  'South Korea',
                   style: TextStyle(fontSize: 24),
                 ),
               ),
             ),Spacer(),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(200,40),
-              ),
-                onPressed: (){
-              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Quiz2()));
+            ElevatedButton(onPressed: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Quiz3()));
             },
                 child: Text("Next Question"))
           ],

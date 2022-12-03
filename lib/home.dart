@@ -17,27 +17,25 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Learn History"),),
+      appBar: AppBar(centerTitle:true,title: Text("Learn History",textAlign:TextAlign.center,),backgroundColor: Colors.indigo,),
       body: Container(
             width: 500,
             height: 900,
-            color: Colors.black,
+            color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Lottie.network(
-                    "https://assets4.lottiefiles.com/packages/lf20_zsmmmni7.json",
-                    animate: animated,fit: BoxFit.fill,repeat: false),
-                ElevatedButton(onPressed: (){
+                Image.asset("assets/splash2.jpeg"),
+                ElevatedButton(style:ElevatedButton.styleFrom(backgroundColor: Colors.indigo),onPressed: (){
                   setState(() {
                     animated=true;
 
                   });
-                  Future.delayed(Duration(seconds: 3),(){moveToMenu();});
+                  Future.delayed(Duration(seconds: 0),(){moveToMenu();});
                   // Duration(seconds: 5);
                   // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Menu()));
-                }, child: Text("Enter")),
+                }, child: Text("Let's Get Back To History!")),
               ],
             ),
         // decoration: BoxDecoration(
